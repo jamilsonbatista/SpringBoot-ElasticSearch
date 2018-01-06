@@ -4,13 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * Created by Mehmet Ali Sahinogullari on 06-Jan-18.
  */
 @Entity
 @Table(name = "CITY")
-public class City {
+public class City implements Serializable {
 
     @Id
     @Column(name = "ID", nullable = false)

@@ -3,13 +3,14 @@ package elastic.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Mehmet Ali Sahinogullari on 06-Jan-18.
  */
 @Entity
 @Table(name = "TOWN")
-public class Town {
+public class Town implements Serializable {
 
     @Id
     @Column(name = "ID", nullable = false)

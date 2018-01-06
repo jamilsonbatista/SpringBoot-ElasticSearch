@@ -4,20 +4,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by Mehmet Ali Sahinogullari on 06-Jan-18.
  */
 @Entity
 @Table(name = "COUNTRY")
-public class Country {
+public class Country implements Serializable {
 
     @Id
     @Column(name = "ID")
-    private  String id;
+    private String id;
 
-    @Column(name = "NAME", nullable =  false)
-    private  String name;
+    @Column(name = "NAME", nullable = false)
+    private String name;
 
     public String getId() {
         return id;

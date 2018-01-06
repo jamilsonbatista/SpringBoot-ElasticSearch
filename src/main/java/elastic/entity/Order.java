@@ -1,13 +1,14 @@
 package elastic.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Mehmet Ali Sahinogullari on 06-Jan-18.
  */
 @Entity
 @Table(name = "ORDER")
-public class Order {
+public class Order implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,8 +16,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID", nullable = false, insertable = false, updatable = false)
-    private User user ;
-
+    private User user;
 
 
 }
