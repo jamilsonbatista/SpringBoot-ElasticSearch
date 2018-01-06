@@ -1,31 +1,32 @@
 package elastic.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Mehmet Ali Sahinogullari on 03-Jan-18.
  */
 
 @Entity
+@Table(name = "USER")
 public class User {
-
 
     @Id
     @GeneratedValue
+    @Column(name = "ID")
     private Long id;
 
-
+    @Column(name = "FIRST_NAME")
     private String firstName;
 
+    @Column(name = "LAST_NAME")
     private String lastName;
 
+    @Column(name = "AGE")
     private int age;
 
-    private String about;
-
-    private String[] interests;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ADDRESS_ID", referencedColumnName = "ID")
+    private Address adres;
 
     public String getFirstName() {
         return firstName;
@@ -51,20 +52,12 @@ public class User {
         this.age = age;
     }
 
-    public String getAbout() {
-        return about;
+    public Address getAdres() {
+        return adres;
     }
 
-    public void setAbout(String about) {
-        this.about = about;
-    }
-
-    public String[] getInterests() {
-        return interests;
-    }
-
-    public void setInterests(String[] interests) {
-        this.interests = interests;
+    public void setAdres(Address adres) {
+        this.adres = adres;
     }
 
     public Long getId() {
