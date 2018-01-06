@@ -1,12 +1,12 @@
 package elastic.dao;
 
-import elastic.entity.User;
+import elastic.entity.Country;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Mehmet Ali Sahinogullari on 03-Jan-18.
+ * Created by Mehmet Ali Sahinogullari on 06-Jan-18.
  */
 @Repository
-public interface IUserDao extends JpaRepository<User, String> {
+public interface ICountryDao extends JpaRepository<Country, String> {
 }

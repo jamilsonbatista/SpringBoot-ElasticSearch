@@ -24,7 +24,7 @@ public class User {
     @Column(name = "AGE")
     private int age;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ADDRESS_ID", referencedColumnName = "ID")
     private Address adres;
 
