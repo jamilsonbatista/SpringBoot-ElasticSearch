@@ -14,4 +14,4 @@ The Project is created in order to practise Elastic Search and Spring Data JPA v
 
 - Docker
 - Kafka
-- Spring Cloud222
+- Spring Cloud
