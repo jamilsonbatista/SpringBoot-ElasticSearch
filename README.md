@@ -1,6 +1,6 @@
 # SpringBoot-ElasticSearch
 
-The Project is created in order to practise Elastic Search via Spring Boot.
+The Project is created in order to practise Elastic Search and Spring Data JPA via Spring Boot.
 
 ### Project Technolojies(NOW)
 
