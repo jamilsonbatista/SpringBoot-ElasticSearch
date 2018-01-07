@@ -8,10 +8,10 @@ The Project is created in order to practise Elastic Search via Spring Boot.
 - Spring Boot
 - Tomcat
 - Elastic Search
+- Spring Data JPA
 
 ### AIM
 
 - Docker
 - Kafka
-- Spring Data JPA
 - Spring Cloud

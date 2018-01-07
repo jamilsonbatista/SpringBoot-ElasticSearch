@@ -77,7 +77,7 @@
             <version>1.11.6.RELEASE</version>
         </dependency>
 
-
+  <!-- MySQL database should be downloaded-->
         <!--dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
