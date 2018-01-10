@@ -20,29 +20,33 @@ public class Address implements Serializable{
     @Column(name = "COUNTRY_ID", nullable = false)
     private String countryId;
 
-    @JsonIgnore
+   /* @JsonIgnore
     @JoinColumn(name = "COUNTRY_ID", referencedColumnName = "ID")
     @ManyToOne(fetch = FetchType.LAZY)
     private Country country;
+    */
 
     @Column(name = "CITY_ID", nullable = false)
     private String cityId;
-
+/*
     @JsonIgnore
     @JoinColumn(name = "CITY_ID", referencedColumnName = "ID", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
     private City city;
 
+    */
     @Column(name = "TOWN_ID", nullable = false)
     private String townId;
 
-    @JsonIgnore
+  /*  @JsonIgnore
     @JoinColumn(name = "TOWN_ID", referencedColumnName = "ID", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
     private Town town;
+*/
+    @Column(name = "APT_NAME", nullable = false)
+    private String apartment; //APT_NAME
 
-    private String apartment;
-
+    @Column(name = "APT_NO", nullable = false)
     private String apartmentNo;
 
     public String getId() {
@@ -59,7 +63,7 @@ public class Address implements Serializable{
 
     public void setCountryId(String countryId) {
         this.countryId = countryId;
-    }
+    }/*
 
     public Country getCountry() {
         return country;
@@ -68,7 +72,7 @@ public class Address implements Serializable{
     public void setCountry(Country country) {
         this.country = country;
     }
-
+*/
     public String getCityId() {
         return cityId;
     }
@@ -76,7 +80,7 @@ public class Address implements Serializable{
     public void setCityId(String cityId) {
         this.cityId = cityId;
     }
-
+/*
     public City getCity() {
         return city;
     }
@@ -84,6 +88,7 @@ public class Address implements Serializable{
     public void setCity(City city) {
         this.city = city;
     }
+    */
 
     public String getTownId() {
         return townId;
@@ -93,14 +98,14 @@ public class Address implements Serializable{
         this.townId = townId;
     }
 
-    public Town getTown() {
+  /*  public Town getTown() {
         return town;
     }
 
     public void setTown(Town town) {
         this.town = town;
     }
-
+*/
     public String getApartment() {
         return apartment;
     }

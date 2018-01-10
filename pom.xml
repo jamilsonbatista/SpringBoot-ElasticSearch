@@ -25,11 +25,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
         <!-- This is a web application -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,40 +44,28 @@
             <artifactId>jstl</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>${es.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.elasticsearch.client</groupId>
-            <artifactId>transport</artifactId>
-            <version>${es.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.0.Final</version>
-        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-elasticsearch -->
         <dependency>
             <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>1.11.6.RELEASE</version>
+            <artifactId>spring-data-elasticsearch</artifactId>
+            <version>2.1.6.RELEASE</version>
         </dependency>
-
-  <!-- MySQL database should be downloaded-->
-        <!--dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency-->
+        </dependency>
 
+        <dependency>
+            <groupId>com.sun.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>3.0.9</version>
+        </dependency>
 
     </dependencies>
 

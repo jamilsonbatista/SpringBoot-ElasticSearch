@@ -23,10 +23,12 @@ public class Town implements Serializable {
     @Column(name = "CITY_ID")
     private String cityId;
 
-    @JsonIgnore
+    /*@JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CITY_ID", referencedColumnName = "ID", nullable = false, updatable = false)
     private City city;
+
+    */
 
     public String getId() {
         return id;
@@ -52,11 +54,11 @@ public class Town implements Serializable {
         this.cityId = cityId;
     }
 
-    public City getCity() {
+/*    public City getCity() {
         return city;
     }
 
     public void setCity(City city) {
         this.city = city;
-    }
+    }*/
 }

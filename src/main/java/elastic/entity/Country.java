@@ -1,9 +1,8 @@
 package elastic.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -20,6 +19,11 @@ public class Country implements Serializable {
     @Column(name = "NAME", nullable = false)
     private String name;
 
+ /*   @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CITY_ID", referencedColumnName = "ID", nullable = false)
+    private  City city;
+*/
     public String getId() {
         return id;
     }
@@ -35,4 +39,14 @@ public class Country implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+ /*   public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    */
 }

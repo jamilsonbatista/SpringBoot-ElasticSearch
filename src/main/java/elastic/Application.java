@@ -8,6 +8,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -17,6 +19,8 @@ import org.springframework.stereotype.Controller;
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
+@EnableElasticsearchRepositories
+@EnableJpaRepositories
 public class Application extends SpringBootServletInitializer {
 
     @Override

@@ -25,10 +25,13 @@ public class User implements Serializable {
     @Column(name = "AGE")
     private int age;
 
-    @OneToOne(fetch = FetchType.EAGER)
+    @Column(name = "ADDRESS_ID")
+    private String adresId;
+
+/*    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ADDRESS_ID", referencedColumnName = "ID")
     private Address adres;
-
+*/
     public String getFirstName() {
         return firstName;
     }
@@ -52,7 +55,7 @@ public class User implements Serializable {
     public void setAge(int age) {
         this.age = age;
     }
-
+/*
     public Address getAdres() {
         return adres;
     }
@@ -60,6 +63,7 @@ public class User implements Serializable {
     public void setAdres(Address adres) {
         this.adres = adres;
     }
+    */
 
     public Long getId() {
         return id;
