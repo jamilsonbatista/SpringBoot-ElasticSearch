@@ -1,6 +1,7 @@
 package elastic.service.impl;
 
 import elastic.dao.IAddressDao;
+import elastic.entity.Address;
 import elastic.service.IAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,4 +16,9 @@ public class AddressService implements IAddressService {
 
     @Autowired
     private IAddressDao addressDao;
+
+    @Override
+    public Address findByUserId(String userId) {
+        return addressDao.findByUserId(userId);
+    }
 }

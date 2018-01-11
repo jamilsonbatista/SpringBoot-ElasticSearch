@@ -15,4 +15,7 @@ public class CityService implements ICityService {
 
     @Autowired
     private ICityDao cityDao;
+
+    public  void test(){
+    }
 }

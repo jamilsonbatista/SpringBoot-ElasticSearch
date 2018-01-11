@@ -20,6 +20,9 @@ public class Address implements Serializable{
     @Column(name = "COUNTRY_ID", nullable = false)
     private String countryId;
 
+    @Column(name = "USER_ID", nullable = false)
+    private String userId;
+
    /* @JsonIgnore
     @JoinColumn(name = "COUNTRY_ID", referencedColumnName = "ID")
     @ManyToOne(fetch = FetchType.LAZY)
