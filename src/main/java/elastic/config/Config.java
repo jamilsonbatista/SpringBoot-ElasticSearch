@@ -4,6 +4,7 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.elasticsearch.node.Node;
 import org.elasticsearch.node.NodeBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -38,21 +39,21 @@ public class Config {
         return new NodeBuilder();
     }
 
-    /*   @Bean
-       public ElasticsearchOperations elasticsearchTemplate() {
-           Settings.Builder elasticsearchSettings =
-                   Settings.settingsBuilder()
-                           .put("http.enabled", "false") // 1
-                           .put("path.data", "") // 2
-                           .put("path.home", "PATH_TO_YOUR_ELASTICSEARCH_DIRECTORY"); // 3
+    @Bean
+    public ElasticsearchOperations elasticsearchTemplate() {
+        Settings.Builder elasticsearchSettings =
+                Settings.settingsBuilder()
+                        .put("http.enabled", "false") // 1
+                        .put("path.data", "") // 2
+                        .put("path.home", "PATH_TO_YOUR_ELASTICSEARCH_DIRECTORY"); // 3
 
-           return new ElasticsearchTemplate(nodeBuilder()
-                   .local(true)
-                   .settings(elasticsearchSettings)
-                   .node()
-                   .client());
-       }
-   */
+        return new ElasticsearchTemplate(nodeBuilder()
+                .local(true)
+                .settings(elasticsearchSettings)
+                .node()
+                .client());
+    }
+// TODO: Will be organized.
     @Bean
     public Client client() throws UnknownHostException {
         Settings esSettings = Settings.settingsBuilder()
@@ -68,9 +69,15 @@ public class Config {
     }
 
     @Bean
+    public Client client2() {
+        Node node = nodeBuilder().clusterName("test").client(true).node();
+        return node.client();
+    }
+
+   /* @Bean
     public ElasticsearchOperations elasticsearchTemplate() throws Exception {
         return new ElasticsearchTemplate(client());
-    }
+    } *
 
     //Embedded Elasticsearch Server
     /*@Bean
