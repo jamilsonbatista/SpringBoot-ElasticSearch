@@ -2,11 +2,12 @@ package elastic.elastic;
 
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
 import org.elasticsearch.client.Client;
+import org.springframework.stereotype.Component;
 
 /**
  * @author  mali.sahin on 22.01.2018.
  */
-
+@Component
 public class IndicesOperations {
 
     private final Client client;
